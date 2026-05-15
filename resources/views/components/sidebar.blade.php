@@ -1,5 +1,5 @@
 <!-- resources/views/components/sidebar.blade.php -->
-<nav id="sidebar" class="w-64 bg-gray-800 text-white min-h-screen pl-2">
+<nav id="sidebar" class="w-64 bg-gray-800 text-white min-h-screen ">
     <div class="pt-6 pb-4 px-4 text-2xl font-bold">Potensiku</div>
     <div class="-mt-4 px-4 text-m text-gray-400">Academic Potential Test</div>
     <ul class="mt-4 text-gray-400">
