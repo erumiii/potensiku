@@ -4,20 +4,20 @@
 @yield('header')
 <x-sidebar />
 <div>
-    <div>
+    <header>
         <x-header />
-    </div>
+    </header>
 
     <!-- Main Content -->
-    <div class="bg-slate-100 p-7">
+    <main class="bg-slate-100 p-7">
 
         <!-- Admin & Tambah soal -->
         <div class="w-306 flex justify-between mb-7">
             <div>
-                <div class="text-4xl font-semibold">Question Bank</div>
-                <div class="mt-1">Manage question banks for academic potential tests.</div>
+                <h1 class="text-4xl font-semibold">Question Bank</h1>
+                <h2 class="text-gray-600">Manage question banks for academic potential tests.</h2>
             </div> 
-            <a href="/questions">
+            <a href="/questions/add">
                 <div class="bg-blue-700 hover:bg-blue-800 hover:cursor-pointer text-white font-medium rounded-sm w-40 h-13 pt-3 pr-3 p-2 mr-2 flex justify-between">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -50,7 +50,7 @@
                             </div>
                         </el-menu>
                     </el-dropdown>
-                    <div class="pt-1 pr-2 text-gray-700">Showing 1-7 of 67 questions</div> <!-- dummy -->
+                    <p class="pt-1 pr-2 text-gray-700">Showing 1-7 of 67 questions</p> <!-- dummy -->
                 </div>
 
                 <div>
@@ -71,7 +71,7 @@
                                 <td class="p-3 text-center">Numeric</td>
                                 <td class="p-3 flex justify-center">
                                     <div class="mr-3">
-                                        <a>
+                                        <a href="">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 stroke-blue-600">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                                             </svg>
@@ -88,12 +88,12 @@
                             </tr>
                             <!-- TEST ROW  -->
                             <tr class="border-solid border-b-2 border-gray-300 bg-white">
-                                <td class="p-3 text-center py-3">#001</td>
+                                <td class="p-3 text-center py-3">#002</td>
                                 <td class="p-3 text-left">test</td>
-                                <td class="p-3 text-center">Numeric</td>
+                                <td class="p-3 text-center">Spatial</td>
                                 <td class="p-3 flex justify-center">
                                     <div class="mr-3">
-                                        <a>
+                                        <a href="">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 stroke-blue-600">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                                             </svg>
@@ -109,12 +109,12 @@
                                 </td>
                             </tr>
                             <tr class="border-solid border-b-2 border-gray-300 bg-white">
-                                <td class="p-3 text-center py-3">#001</td>
+                                <td class="p-3 text-center py-3">#003</td>
                                 <td class="p-3 text-left">test</td>
-                                <td class="p-3 text-center">Numeric</td>
+                                <td class="p-3 text-center">Logic</td>
                                 <td class="p-3 flex justify-center">
                                     <div class="mr-3">
-                                        <a>
+                                        <a href="">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 stroke-blue-600">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                                             </svg>
@@ -130,12 +130,12 @@
                                 </td>
                             </tr>
                             <tr class="border-solid border-b-2 border-gray-300 bg-white">
-                                <td class="p-3 text-center py-3">#001</td>
+                                <td class="p-3 text-center py-3">#004</td>
                                 <td class="p-3 text-left">test</td>
                                 <td class="p-3 text-center">Numeric</td>
                                 <td class="p-3 flex justify-center">
                                     <div class="mr-3">
-                                        <a>
+                                        <a href="">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 stroke-blue-600">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                                             </svg>
@@ -151,12 +151,12 @@
                                 </td>
                             </tr>
                             <tr class="border-solid border-b-2 border-gray-300 bg-white">
-                                <td class="p-3 text-center py-3">#001</td>
+                                <td class="p-3 text-center py-3">#005</td>
                                 <td class="p-3 text-left">test</td>
-                                <td class="p-3 text-center">Numeric</td>
+                                <td class="p-3 text-center">Verbal</td>
                                 <td class="p-3 flex justify-center">
                                     <div class="mr-3">
-                                        <a>
+                                        <a href="">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 stroke-blue-600">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                                             </svg>
@@ -172,12 +172,12 @@
                                 </td>
                             </tr>
                             <tr class="border-solid border-b-2 border-gray-300 bg-white">
-                                <td class="p-3 text-center py-3">#001</td>
+                                <td class="p-3 text-center py-3">#006</td>
                                 <td class="p-3 text-left">test</td>
-                                <td class="p-3 text-center">Numeric</td>
+                                <td class="p-3 text-center">Verbal</td>
                                 <td class="p-3 flex justify-center">
                                     <div class="mr-3">
-                                        <a>
+                                        <a href="">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 stroke-blue-600">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                                             </svg>
@@ -193,12 +193,12 @@
                                 </td>
                             </tr>
                             <tr class="border-solid border-b-2 border-gray-300 bg-white">
-                                <td class="p-3 text-center py-3">#001</td>
+                                <td class="p-3 text-center py-3">#007</td>
                                 <td class="p-3 text-left">test</td>
-                                <td class="p-3 text-center">Numeric</td>
+                                <td class="p-3 text-center">Logic</td>
                                 <td class="p-3 flex justify-center">
                                     <div class="mr-3">
-                                        <a>
+                                        <a href="">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 stroke-blue-600">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                                             </svg>
@@ -224,9 +224,9 @@
             </div>
             
         </div>
-    </div>
-    <div>
+    </main>
+    <footer>
         <x-footer />
-    </div>
+    </footer>
 </div>
 @yield('footer')
