@@ -21,3 +21,7 @@ Route::get('/questions/add', function (){
 Route::get('/questions/edit', function (){
     return view('editQuestions');
 });
+
+Route::get('/logout', function (){
+    return view('signIn');
+});

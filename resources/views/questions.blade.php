@@ -2,23 +2,24 @@
 @include('layouts.footer')
 
 @yield('header')
-<x-sidebar />
-<div>
-    <header>
-        <x-header />
-    </header>
+<div class="flex-1 flex min-h-0 overflow-hidden">
+    <x-sidebar />
+    <div class="flex flex-col flex-1 min-h-0 overflow-hidden">
+        <header class="flex-none">
+            <x-header />
+        </header>
 
-    <!-- Main Content -->
-    <main class="bg-slate-100 p-7">
+        <!-- MAIN CONTENT -->
+        <main class="flex-1 overflow-y-auto overflow-x-hidden bg-brand-light p-7">
 
-        <!-- Admin & Tambah soal -->
+        <!-- HEADING & ADD QUESTION BUTTON -->
         <div class="w-306 flex justify-between mb-7">
             <div>
                 <h1 class="text-4xl font-semibold">Question Bank</h1>
                 <h2 class="text-gray-600">Manage question banks for academic potential tests.</h2>
             </div> 
             <a href="/questions/add">
-                <div class="bg-blue-700 hover:bg-blue-800 hover:cursor-pointer text-white font-medium rounded-sm w-40 h-13 pt-3 pr-3 p-2 mr-2 flex justify-between">
+                <div class="bg-brand-dark hover:bg-neutral-700 hover:cursor-pointer text-white font-medium rounded-sm w-40 h-13 pt-3 pr-3 p-2 mr-2 flex justify-between">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                     </svg>
@@ -27,9 +28,9 @@
             </a>
         </div>
         
-        <!-- Recent Activities & Quick Metric -->
+        <!-- DATA TABLE -->
         <div class="flex justify-between">
-            <!-- Recent Activities -->
+            <!-- CATEGORY SORT BUTTON -->
             <div class="w-305 h-112 border-solid border-2 border-gray-300 bg-gray-100">
                 <div class="border-solid border-b-2 border-gray-300 py-2 px-4 flex justify-between">
                     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
@@ -40,7 +41,7 @@
                                 <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
                             </svg>
                         </button>
-
+                        
                         <el-menu anchor="bottom start" popover class="w-56 origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
                             <div class="py-1">
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Verbal</a>
@@ -52,7 +53,8 @@
                     </el-dropdown>
                     <p class="pt-1 pr-2 text-gray-700">Showing 1-7 of 67 questions</p> <!-- dummy -->
                 </div>
-
+                
+                <!-- TABLE -->
                 <div>
                     <table class="table-auto">
                         <thead class="border-solid border-b-2 border-gray-300">
@@ -64,7 +66,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- pakai foreach untuk menambahkan row secara dinamis -->
+                            <!-- USE foreach STATEMENT TO INSERT/MAKE NEW ROW OF TABLE DYNAMICALLY -->
                             <tr class="border-solid border-b-2 border-gray-300 bg-white">
                                 <td class="p-3 text-center py-3">#001</td>
                                 <td class="p-3 text-left">test</td>
@@ -217,16 +219,12 @@
                         </tbody>
                     </table>
                 </div>
-                <!-- Activities Content (ga dilanjut) -->
-                <!-- <div class="flex justify-center pt-45">
-                    <div class="text-3xl font-semibold text-gray-500">There's no question yet</div>
-                </div> -->
             </div>
-            
         </div>
     </main>
-    <footer>
+    <footer class="flex-none">
         <x-footer />
     </footer>
+    </div>
 </div>
 @yield('footer')
