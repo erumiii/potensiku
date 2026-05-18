@@ -2,46 +2,112 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+// Import trait bawaan Laravel
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+/**
+ * Model User
+ * Dipakai Laravel untuk:
+ * - login
+ * - register
+ * - authentication
+ * - authorization
+ */
 class User extends Authenticatable
 {
+    /**
+     * Trait bawaan Laravel
+     *
+     * HasFactory:
+     * dipakai untuk factory/seeder dummy data
+     *
+     * Notifiable:
+     * dipakai untuk notification Laravel
+     */
     use HasFactory, Notifiable;
 
     /**
-     * The attributes that are mass assignable.
+     * Field yang boleh diisi mass-assignment
      *
-     * @var array<int, string>
+     * Contoh:
+     * User::create([...])
+     *
+     * Field di sini boleh langsung diinsert
      */
     protected $fillable = [
+
+        /**
+         * Nama user
+         */
         'name',
+
+        /**
+         * Username login
+         */
+        'username',
+
+        /**
+         * Email user
+         */
         'email',
+
+        /**
+         * Password user
+         */
         'password',
+
+        /**
+         * Role authorization
+         * admin / user
+         */
+        'role',
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
+     * Field yang disembunyikan
+     * saat data user ditampilkan
      */
     protected $hidden = [
+
+        /**
+         * Password tidak boleh tampil
+         */
         'password',
+
+        /**
+         * Token remember me Laravel
+         */
         'remember_token',
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * Cast otomatis Laravel
      */
     protected function casts(): array
     {
         return [
+
+            /**
+             * Email verification datetime
+             */
             'email_verified_at' => 'datetime',
+
+            /**
+             * Password otomatis di-hash bcrypt
+             */
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Cek apakah user adalah admin
+     *
+     * Dipakai untuk authorization
+     */
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
     }
 }
