@@ -1,5 +1,5 @@
 <!-- resources/views/components/sidebar.blade.php -->
-<nav id="sidebar" class="w-64 bg-neutral-50 text-white h-screen sticky top-0 border-solid border-r-2 border-gray-300">
+    <nav id="sidebar" class="w-64 bg-neutral-50 text-white min-h-screen flex flex-col border-solid border-r-2 border-gray-300">
     <div class="flex items-center ml-1">
         <<img src="{{ asset('/logo.svg') }}" alt="Logo" class="mt-3 w-6 h-6 object-cover">
         <div class="pt-6 pb-4 px-1 text-2xl font-bold text-brand-dark">PeakScore</div>
@@ -32,7 +32,7 @@
             Test Results
         </a></li>
     </ul>
-    <div class="px-5 pb-4 pt-92 font-semibold text-brand-dark">
+    <div class="mt-auto px-5 pb-4 font-semibold text-brand-dark">
         <div class="relative w-full" x-data="{ open: false }" @click.outside="open = false">
 
             {{-- Dropdown Menu (muncul ke ATAS) --}}
@@ -57,7 +57,7 @@
 
                 <hr class="border-gray-100">
 
-                <form method="POST" action="#">
+                <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button type="submit"
                         class="flex items-center gap-3 w-full px-4 py-3 text-sm text-red-600 hover:bg-red-50 transition">
