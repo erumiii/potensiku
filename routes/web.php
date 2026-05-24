@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\ParticipantController;
 use Illuminate\Support\Facades\Route;
 
 // Import AuthController
@@ -91,16 +91,32 @@ Route::middleware(['auth', 'admin'])->group(function () {
     /**
      * Edit soal
      */
-    Route::get('/questions/edit', function () {
-        return view('editQuestions');
-    })->name('questions.edit');
+    Route::get('/questions/{id}/edit', [QuestionController::class, 'edit'])
+    ->name('questions.edit');
+
+    /**
+     * Update
+     */
+    Route::put('/questions/{id}', [QuestionController::class, 'update'])
+    ->name('questions.update');
 
     /**
      * Participants
      */
-    Route::get('/participants', function () {
-        return view('participants');
-    })->name('participants');
+    Route::prefix('participants')->group(function () {
+
+        Route::get('/', [ParticipantController::class, 'index'])->name('participants.index');
+
+        Route::get('/create', [ParticipantController::class, 'create'])->name('participants.create');
+
+        Route::post('/', [ParticipantController::class, 'store'])->name('participants.store');
+
+        Route::get('/{participant}/edit', [ParticipantController::class, 'edit'])->name('participants.edit');
+
+        Route::put('/{participant}', [ParticipantController::class, 'update'])->name('participants.update');
+
+        Route::delete('/{participant}', [ParticipantController::class, 'destroy'])->name('participants.destroy');
+    });
 
     /**
      * Test Results

@@ -74,20 +74,20 @@
 <body class="min-h-screen flex items-center justify-center px-5 py-10">
 
     {{-- Main Card --}}
-    <div class="w-full max-w-5xl bg-white rounded-[28px] shadow-[0_8px_40px_rgba(80,60,180,0.10)] overflow-hidden flex">
+    <div class="w-full max-w-5xl bg-white rounded-[28px] shadow-[0_8px_40px_rgba(15,23,42,0.08)] overflow-hidden flex">
 
         {{-- ================================================= --}}
         {{-- LEFT PANEL --}}
         {{-- ================================================= --}}
         <div class="hidden lg:flex w-[340px] m-2 rounded-[24px] overflow-hidden relative flex-col justify-between p-8 text-white
-                    bg-gradient-to-br from-slate-500 via-blue-900 to-indigo-800">
+                     bg-gradient-to-br from-neutral-700 via-neutral-800 to-neutral-950">
 
             {{-- Decorative Blur --}}
             <div class="absolute inset-0 overflow-hidden">
 
                 <div class="absolute top-[-80px] right-[-40px] w-72 h-72 bg-white/20 rounded-full blur-3xl"></div>
 
-                <div class="absolute bottom-[-80px] left-[-40px] w-72 h-72 bg-cyan-300/20 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-[-80px] left-[-40px] w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
 
             </div>
 

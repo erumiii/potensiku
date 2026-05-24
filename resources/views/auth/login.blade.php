@@ -418,7 +418,7 @@
             justify-center
             gap-2
 
-            bg-blue-700 hover:bg-blue-800
+            bg-zinc-900 hover:bg-zinc-800
 
             active:scale-[0.98]
 

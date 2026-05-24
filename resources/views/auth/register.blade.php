@@ -175,7 +175,7 @@
     {{-- Submit --}}
     <button
         type="submit"
-        class="w-full flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 active:scale-[0.98]
+        class="w-full flex items-center justify-center gap-2 bg-zinc-900 hover:bg-zinc-800 active:scale-[0.98]
                text-white font-semibold py-3.5 rounded-lg text-sm transition-all duration-150 shadow-sm"
         :disabled="loading"
         :class="loading ? 'opacity-70 cursor-not-allowed' : ''"
