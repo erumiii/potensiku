@@ -34,15 +34,14 @@ class AuthController extends Controller
     /**
      * Menampilkan halaman login
      */
+    // ✅ Fix:
     public function showLogin()
     {
-        // Jika user sudah login
-        // langsung arahkan ke dashboard
         if (Auth::check()) {
-            return redirect()->route('dashboard');
+            return Auth::user()->role === 'admin'
+                ? redirect()->route('dashboard')
+                : redirect()->route('user.dashboard');
         }
-
-        // Tampilkan halaman login
         return view('auth.login');
     }
 
@@ -106,7 +105,9 @@ class AuthController extends Controller
         // Kalau sudah login
         // langsung ke dashboard
         if (Auth::check()) {
-            return redirect()->route('dashboard');
+            return Auth::user()->role === 'admin'
+                ? redirect()->route('dashboard')
+                : redirect()->route('user.dashboard');
         }
 
         // Tampilkan halaman register
