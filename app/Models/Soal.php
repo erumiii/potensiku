@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Soal extends Model
 {
-    //
+    protected $table = 'soal';
+    public $timestamps = false;
+    protected $primaryKey = 'soalId';
+    protected $fillable = ['isiSoal', 'kategori', 'opsiA', 'opsiB', 'opsiC', 'opsiD', 'jawabanBenar'];
 }

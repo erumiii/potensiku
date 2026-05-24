@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\ParticipantController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SoalController;
 
 // Import AuthController
 use App\Http\Controllers\AuthController;
@@ -74,31 +75,24 @@ Route::middleware(['auth', 'admin'])->group(function () {
         return view('index');
     })->name('dashboard');
 
-    /**
-     * Halaman questions
-     */
-    Route::get('/questions', function () {
-        return view('questions');
-    })->name('questions');
+    Route::get('/questions', function (){
+        return view('questions.questions');
+    });
 
-    /**
-     * Tambah soal
-     */
-    Route::get('/questions/add', function () {
-        return view('addQuestions');
-    })->name('questions.add');
+    Route::get('/questions/add', function (){
+        return view('questions.create');
+    });
 
-    /**
-     * Edit soal
-     */
-    Route::get('/questions/{id}/edit', [QuestionController::class, 'edit'])
-    ->name('questions.edit');
+    Route::get('/questions/edit', function (){
+        return view('questions.edit');
+    });
 
-    /**
-     * Update
-     */
-    Route::put('/questions/{id}', [QuestionController::class, 'update'])
-    ->name('questions.update');
+    Route::get('/questions', [SoalController::class, 'index'])->name('questions.index');
+    Route::get('/questions/add', [SoalController::class, 'create'])->name('questions.create');
+    Route::post('/questions/add', [SoalController::class, 'store'])->name('questions.store');
+    Route::get('/questions/{id}/edit', [SoalController::class, 'edit'])->name('questions.edit');
+    Route::put('/questions/{id}', [SoalController::class, 'update'])->name('questions.update');
+    Route::delete('/questions/{id}', [SoalController::class, 'destroy'])->name('questions.destroy');
 
     /**
      * Participants

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 // Import model User
 use App\Models\User;
+use App\Models\Participant;
 
 // Import request Laravel
 use Illuminate\Http\Request;
@@ -158,6 +159,21 @@ class AuthController extends Controller
 
             // Role default
             'role' => 'user',
+        ]);
+
+        // =====================================================
+        // BUAT DATA PARTICIPANT OTOMATIS
+        // =====================================================
+        Participant::create([
+
+            // Relasi ke user
+            'user_id' => $user->id,
+
+            // Status default
+            'status' => 'active',
+
+            // Optional auto code
+            'participant_code' => 'PST-' . date('Y') . '-' . str_pad($user->id, 4, '0', STR_PAD_LEFT),
         ]);
 
         // Login otomatis setelah register

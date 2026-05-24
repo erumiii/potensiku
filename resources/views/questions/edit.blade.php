@@ -39,8 +39,6 @@
             </ul>
             <div class="px-5 pb-4 pt-145 font-semibold text-brand-dark">
                 <div class="relative w-full" x-data="{ open: false }" @click.outside="open = false">
-
-                    {{-- Dropdown Menu (muncul ke ATAS) --}}
                     <div x-show="open" x-cloak
                         x-transition:enter="transition ease-out duration-150"
                         x-transition:enter-start="opacity-0 scale-90"
@@ -50,22 +48,17 @@
                         x-transition:leave-end="opacity-0 scale-90"
                         style="transform-origin: bottom center;"
                         class="absolute bottom-full left-0 right-0 mb-3 bg-white rounded-lg overflow-hidden z-50 shadow-xl border border-gray-200">
-
-                        <a href="#"
-                            class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 transition">
+                        <a href="#" class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 transition">
                             <svg xmlns="http://www.w3.org/2000/svg" class="size-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                             </svg>
                             Account Settings
                         </a>
-
                         <hr class="border-gray-100">
-
                         <form method="POST" action="#">
                             @csrf
-                            <button type="submit"
-                                class="flex items-center gap-3 w-full px-4 py-3 text-sm text-red-600 hover:bg-red-50 transition">
+                            <button type="submit" class="flex items-center gap-3 w-full px-4 py-3 text-sm text-red-600 hover:bg-red-50 transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
                                 </svg>
@@ -73,10 +66,7 @@
                             </button>
                         </form>
                     </div>
-
-                    {{-- Trigger: icon user + nama (horizontal seperti gambar 2) --}}
-                    <button @click="open = !open"
-                        class="flex items-center gap-3 w-full px-3 py-3 rounded-lg hover:bg-neutral-200 transition">
+                    <button @click="open = !open" class="flex items-center gap-3 w-full px-3 py-3 rounded-lg hover:bg-neutral-200 transition">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-9 shrink-0 text-gray-700">
                             <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
                         </svg>
@@ -99,24 +89,24 @@
 
             <!-- HEADING -->
             <div class="max-w-3xl mx-auto mb-5">
-                <div>
-                    <div class="flex items-center mb-2">
-                        <a href="/questions" class="mr-1 text-gray-600 text-sm hover:underline">Questions</a>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3 mt-1 mr-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                        </svg>
-                        <p class="font-semibold text-sm">Add Question</p>
-                    </div>
-                    <h1 class="text-4xl font-semibold">Add Question</h1>
-                    <h2 class="text-gray-600">Make sure to input the data correctly.</h2>
+                <div class="flex items-center mb-2">
+                    <a href="/questions" class="mr-1 text-gray-600 text-sm hover:underline">Questions</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3 mt-1 mr-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                    <p class="font-semibold text-sm">Edit Question</p>
                 </div>
+                <h1 class="text-4xl font-semibold">Edit Question</h1>
+                <h2 class="text-gray-600">Make sure to input the data correctly.</h2>
             </div>
 
             <!-- FORM CARD -->
             <div class="max-w-3xl mx-auto">
                 <div class="border-solid border-2 border-gray-300 bg-white p-8 rounded-sm">
-                    <form action="{{ route('questions.store') }}" method="POST" class="w-full">
+                    {{-- Method spoofing untuk PUT --}}
+                    <form action="{{ route('questions.update', $question->soalId) }}" method="POST" class="w-full">
                         @csrf
+                        @method('PUT')
 
                         <!-- CATEGORY + CORRECT ANSWER -->
                         <div class="flex gap-x-5">
@@ -124,11 +114,12 @@
                             <div class="flex-1">
                                 <label class="font-bold text-xs">QUESTION CATEGORY</label>
                                 <select name="kategori" class="pl-2 border-solid rounded-sm border-2 w-full h-10 mt-1 bg-neutral-100 {{ $errors->has('kategori') ? 'border-red-500' : 'border-gray-300' }}">
-                                    <option value="" disabled selected hidden>Choose a category</option>
-                                    <option value="Verbal"  {{ old('kategori') == 'Verbal'  ? 'selected' : '' }}>Verbal</option>
-                                    <option value="Numeric" {{ old('kategori') == 'Numeric' ? 'selected' : '' }}>Numeric</option>
-                                    <option value="Logic"   {{ old('kategori') == 'Logic'   ? 'selected' : '' }}>Logic</option>
-                                    <option value="Spatial" {{ old('kategori') == 'Spatial' ? 'selected' : '' }}>Spatial</option>
+                                    <option value="" disabled hidden>Choose a category</option>
+                                    @foreach(['Verbal', 'Numeric', 'Logic', 'Spatial'] as $cat)
+                                        <option value="{{ $cat }}" {{ old('kategori', $question->kategori) == $cat ? 'selected' : '' }}>
+                                            {{ $cat }}
+                                        </option>
+                                    @endforeach
                                 </select>
                                 <div class="min-h-5 mt-1">
                                     @error('kategori')
@@ -141,11 +132,12 @@
                             <div class="flex-1">
                                 <label class="font-bold text-xs">CORRECT ANSWER</label>
                                 <select name="jawabanBenar" class="pl-2 border-solid rounded-sm border-2 w-full h-10 mt-1 bg-neutral-100 {{ $errors->has('jawabanBenar') ? 'border-red-500' : 'border-gray-300' }}">
-                                    <option value="" disabled selected hidden>Choose an answer</option>
-                                    <option value="A" {{ old('jawabanBenar') == 'A' ? 'selected' : '' }}>A</option>
-                                    <option value="B" {{ old('jawabanBenar') == 'B' ? 'selected' : '' }}>B</option>
-                                    <option value="C" {{ old('jawabanBenar') == 'C' ? 'selected' : '' }}>C</option>
-                                    <option value="D" {{ old('jawabanBenar') == 'D' ? 'selected' : '' }}>D</option>
+                                    <option value="" disabled hidden>Choose an answer</option>
+                                    @foreach(['A', 'B', 'C', 'D'] as $ans)
+                                        <option value="{{ $ans }}" {{ old('jawabanBenar', $question->jawabanBenar) == $ans ? 'selected' : '' }}>
+                                            {{ $ans }}
+                                        </option>
+                                    @endforeach
                                 </select>
                                 <div class="min-h-5 mt-1">
                                     @error('jawabanBenar')
@@ -160,7 +152,7 @@
                             <label class="font-bold text-xs">QUESTION TEXT</label>
                             <textarea name="isiSoal" placeholder="Enter question instruction in here"
                                 class="bg-neutral-100 mt-1 border-solid border-2 rounded-sm p-2 px-3 w-full text-left align-top resize-none {{ $errors->has('isiSoal') ? 'border-red-500' : 'border-gray-300' }}"
-                                rows="4">{{ old('isiSoal') }}</textarea>
+                                rows="4">{{ old('isiSoal', $question->isiSoal) }}</textarea>
                             <div class="min-h-5 mt-1">
                                 @error('isiSoal')
                                     <p class="text-red-500 text-xs">The question text field is required.</p>
@@ -175,7 +167,8 @@
                             <div class="mb-2">
                                 <div class="flex items-center">
                                     <span class="bg-brand-dark text-brand-light w-10 h-10 inline-flex items-center justify-center font-medium rounded-xs shrink-0">{{ $opt }}</span>
-                                    <input type="text" name="opsi{{ $opt }}" value="{{ old('opsi'.$opt) }}"
+                                    <input type="text" name="opsi{{ $opt }}"
+                                        value="{{ old('opsi'.$opt, $question->{'opsi'.$opt}) }}"
                                         placeholder="Insert {{ $opt }} text answer"
                                         class="ml-2 px-4 py-2 w-full rounded border {{ $errors->has('opsi'.$opt) ? 'border-red-500' : 'border-gray-300' }}">
                                 </div>
@@ -195,7 +188,7 @@
                                 Cancel
                             </a>
                             <button type="submit" class="px-4 py-2 rounded bg-blue-600 font-medium text-white hover:bg-blue-700">
-                                Save
+                                Update
                             </button>
                         </div>
                     </form>
