@@ -12,13 +12,13 @@
             <div class="-mt-4 px-4 text-m text-neutral-600">Academic Potential Test</div>
             <hr class="border-gray-300 mt-4 w-55 mx-auto border-1">
             <ul class="mt-4 text-neutral-600">
-                <li class="pl-1 hover:bg-neutral-200 text-gray-800 font-medium"><a href="/" class="block p-3 flex items-center">
+                <li class="pl-1 hover:bg-neutral-200"><a href="/" class="block p-3 flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-3">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
                     </svg>
                     Dashboard
                 </a></li>
-                <li class="pl-1 hover:bg-neutral-200"><a href="/questions" class="block p-3 flex items-center">
+                <li class="pl-1 hover:bg-neutral-200 text-gray-800 font-medium"><a href="/questions" class="block p-3 flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-3">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
                     </svg>
@@ -88,6 +88,7 @@
             </div>
         </nav>
     </aside>
+
     <div class="flex flex-col flex-1 min-h-0 overflow-hidden">
         <header class="flex-none">
             <x-header />
@@ -96,69 +97,115 @@
         <!-- MAIN CONTENT -->
         <main class="flex-1 overflow-y-auto overflow-x-hidden bg-brand-light p-7">
 
-        <!-- HEADING -->
-        <div class="flex justify-between mb-7 w-full">
-            <div>
-                <h1 class="text-4xl font-semibold">Admin Dashboard</h1>
-                <h2 class="text-gray-600">Monitoring metrics and academic integrity overview.</h2>
-            </div> 
-        </div>
-        
-        <!-- RECENT ACTIVITIES & PARTICIPANT METRICS -->
-        <div class="flex justify-between gap-10 mt-20">
-            <!-- RECENT ACTIVITIES -->
-            <div class="flex-1 rounded border border-gray-300 bg-white">
-                <div class="border-solid border-b border-gray-300 py-2 px-4 flex justify-between">
-                    <p class="text-lg font-semibold">Recent Test Activities</p>
-                    <a href="#" class="text-blue-400 hover:text-blue-600 hover:cursor-pointer">View all</a>
+            <!-- HEADING -->
+            <div class="max-w-3xl mx-auto mb-5">
+                <div>
+                    <div class="flex items-center mb-2">
+                        <a href="/questions" class="mr-1 text-gray-600 text-sm hover:underline">Questions</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3 mt-1 mr-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                        <p class="font-semibold text-sm">Add Question</p>
+                    </div>
+                    <h1 class="text-4xl font-semibold">Add Question</h1>
+                    <h2 class="text-gray-600">Make sure to input the data correctly.</h2>
                 </div>
+            </div>
 
-                <!-- ACTIVITIES CONTENT (WIP). SHOULD BE USING USER RESULTS DATA -->
-                    <h3 class="text-xl font-medium text-gray-500 mt-40 text-center">There's no activity</h3>
-            </div>
-            
-            <!-- METRICS -->
-            <div class="w-[320px] h-[456px] rounded border border-gray-300 bg-white">
-                <h3 class="border-solid border-b  border-gray-300 flex justify-center font-semibold text-xl py-4">Quick Metrics</h3>
-                <div class="p-7 bg-gray-100">
-                    <!-- QUESTION METRICS -->
-                    <div class="w-full bg-white rounded border border-gray-300 p-5 mb-7">
-                        <div class="flex justify-between">
-                            <div class="w-11 h-11 bg-gray-300 flex justify-center pt-2 rounded-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-                                </svg>
+            <!-- FORM CARD -->
+            <div class="max-w-3xl mx-auto">
+                <div class="border-solid border-2 border-gray-300 bg-white p-8 rounded-sm">
+                    <form action="{{ route('questions.store') }}" method="POST" class="w-full">
+                        @csrf
+
+                        <!-- CATEGORY + CORRECT ANSWER -->
+                        <div class="flex gap-x-5">
+                            <!-- CATEGORY -->
+                            <div class="flex-1">
+                                <label class="font-bold text-xs">QUESTION CATEGORY</label>
+                                <select name="kategori" class="pl-2 border-solid rounded-sm border-2 w-full h-10 mt-1 bg-neutral-100 {{ $errors->has('kategori') ? 'border-red-500' : 'border-gray-300' }}">
+                                    <option value="" disabled selected hidden>Choose a category</option>
+                                    <option value="Verbal"  {{ old('kategori') == 'Verbal'  ? 'selected' : '' }}>Verbal</option>
+                                    <option value="Numeric" {{ old('kategori') == 'Numeric' ? 'selected' : '' }}>Numeric</option>
+                                    <option value="Logic"   {{ old('kategori') == 'Logic'   ? 'selected' : '' }}>Logic</option>
+                                    <option value="Spatial" {{ old('kategori') == 'Spatial' ? 'selected' : '' }}>Spatial</option>
+                                </select>
+                                <div class="min-h-5 mt-1">
+                                    @error('kategori')
+                                        <p class="text-red-500 text-xs">The category field is required.</p>
+                                    @enderror
+                                </div>
                             </div>
-                            <a href="/questions" class="text-blue-400 hover:text-blue-600 hover:cursor-pointer">View all</a>
-                        </div>
-                        <div>
-                            <h4 class="text-base font-medium mt-2">TOTAL QUESTIONS</h4>
-                            <p class="text-3xl font-semibold">120</p> <!-- dummy data -->
-                        </div>
-                    </div>
-                    
-                    <!-- PARTICIPANTS METRICS -->
-                    <div class="w-full bg-white rounded border border-gray-300 p-5">
-                        <div class="flex justify-between">
-                            <div class="w-11 h-11 bg-gray-300 flex justify-center pt-2 rounded-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
-                                </svg>
+
+                            <!-- CORRECT ANSWER -->
+                            <div class="flex-1">
+                                <label class="font-bold text-xs">CORRECT ANSWER</label>
+                                <select name="jawabanBenar" class="pl-2 border-solid rounded-sm border-2 w-full h-10 mt-1 bg-neutral-100 {{ $errors->has('jawabanBenar') ? 'border-red-500' : 'border-gray-300' }}">
+                                    <option value="" disabled selected hidden>Choose an answer</option>
+                                    <option value="A" {{ old('jawabanBenar') == 'A' ? 'selected' : '' }}>A</option>
+                                    <option value="B" {{ old('jawabanBenar') == 'B' ? 'selected' : '' }}>B</option>
+                                    <option value="C" {{ old('jawabanBenar') == 'C' ? 'selected' : '' }}>C</option>
+                                    <option value="D" {{ old('jawabanBenar') == 'D' ? 'selected' : '' }}>D</option>
+                                </select>
+                                <div class="min-h-5 mt-1">
+                                    @error('jawabanBenar')
+                                        <p class="text-red-500 text-xs">The correct answer field is required.</p>
+                                    @enderror
+                                </div>
                             </div>
-                            <a href="/participants" class="text-blue-400 hover:text-blue-600 hover:cursor-pointer">View all</a>
                         </div>
-                        <div>
-                            <h4 class="text-base font-medium mt-2">TOTAL PARTICIPANTS</h4>
-                            <p class="text-3xl font-semibold">32</p> <!-- dummy data -->
+
+                        <!-- QUESTION TEXT -->
+                        <div class="mt-5">
+                            <label class="font-bold text-xs">QUESTION TEXT</label>
+                            <textarea name="isiSoal" placeholder="Enter question instruction in here"
+                                class="bg-neutral-100 mt-1 border-solid border-2 rounded-sm p-2 px-3 w-full text-left align-top resize-none {{ $errors->has('isiSoal') ? 'border-red-500' : 'border-gray-300' }}"
+                                rows="4">{{ old('isiSoal') }}</textarea>
+                            <div class="min-h-5 mt-1">
+                                @error('isiSoal')
+                                    <p class="text-red-500 text-xs">The question text field is required.</p>
+                                @enderror
+                            </div>
                         </div>
-                    </div>
+
+                        <!-- ANSWER OPTIONS -->
+                        <div class="mt-5">
+                            <p class="font-bold text-xs mb-3">ANSWER OPTION</p>
+                            @foreach(['A','B','C','D'] as $opt)
+                            <div class="mb-2">
+                                <div class="flex items-center">
+                                    <span class="bg-brand-dark text-brand-light w-10 h-10 inline-flex items-center justify-center font-medium rounded-xs shrink-0">{{ $opt }}</span>
+                                    <input type="text" name="opsi{{ $opt }}" value="{{ old('opsi'.$opt) }}"
+                                        placeholder="Insert {{ $opt }} text answer"
+                                        class="ml-2 px-4 py-2 w-full rounded border {{ $errors->has('opsi'.$opt) ? 'border-red-500' : 'border-gray-300' }}">
+                                </div>
+                                <div class="min-h-5 mt-1 ml-12">
+                                    @error('opsi'.$opt)
+                                        <p class="text-red-500 text-xs">The option {{ $opt }} field is required.</p>
+                                    @enderror
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="flex justify-end gap-3 pt-4">
+                            <a href="{{ route('questions.index') }}"
+                                class="px-4 py-2 rounded border-2 border-gray-300 font-medium hover:bg-gray-50">
+                                Cancel
+                            </a>
+                            <button type="submit" class="px-4 py-2 rounded bg-blue-600 font-medium text-white hover:bg-blue-700">
+                                Save
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
-    </main>
-    <footer class="flex-none">
-        <x-footer />
-    </footer>
+
+        </main>
+        <footer class="flex-none">
+            <x-footer />
+        </footer>
     </div>
 </div>
 @yield('footer')
