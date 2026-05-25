@@ -37,7 +37,7 @@
                     Test Results
                 </a></li>
             </ul>
-            <div class="px-5 pb-4 pt-145 font-semibold text-brand-dark">
+            <div class="px-5 pb-4 pt-90 font-semibold text-brand-dark">
                 <div class="relative w-full" x-data="{ open: false }" @click.outside="open = false">
 
                     {{-- Dropdown Menu (muncul ke ATAS) --}}
@@ -62,7 +62,7 @@
 
                         <hr class="border-gray-100">
 
-                        <form method="POST" action="#">
+                        <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <button type="submit"
                                 class="flex items-center gap-3 w-full px-4 py-3 text-sm text-red-600 hover:bg-red-50 transition">
