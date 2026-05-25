@@ -2,7 +2,7 @@
 PeakScore is an academic potential test application. Currently, the application is developed solely from an admin perspective. Further development is needed to make it more accessible to the general public. This application was created to fulfill the final project assignment for the Web-Based Programming course.
 
 ## Prerequisites
-PHP >= 8.5
+PHP >= 8.5 <br>
 Laravel >= 11.0.0
 
 
