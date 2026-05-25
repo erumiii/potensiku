@@ -10,5 +10,5 @@ Laravel >= 11.0.0
 
 - [@zefanyafelicita](https://github.com/zefanyafelicita) (Felis)
 - [@Clarisse-X](https://github.com/Clarisse-X) (Clarisse)
-- [@azalea-17](https://github.com/azalea-17) (Azel)
+- [@azalea-17](https://github.com/azalea-17) (Azalea)
 - [@erumiii](https://github.com/erumiii) (Keenan)
