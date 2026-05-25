@@ -59,13 +59,13 @@ class AuthController extends Controller
             'password.required' => 'Password wajib diisi.',
         ]);
 
-        // Ambil data login
+        // Ambil data login dri form inputnya
         $credentials = [
             'username' => $request->username,
             'password' => $request->password,
         ];
 
-        // Cek apakah login berhasil
+        // Cek ke database apakah login berhasil
         if (Auth::attempt($credentials)) {
 
             // Regenerate session biar lebih aman
