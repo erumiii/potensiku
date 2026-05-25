@@ -8,7 +8,7 @@ Laravel >= 11.0.0
 
 ## Our Team
 
-- [@zefanyafelicita](https://github.com/zefanyafelicita)
-- [@Clarisse-X](https://github.com/Clarisse-X)
-- [@azalea-17](https://github.com/azalea-17)
-- [@erumiii](https://github.com/erumiii)
+- [@zefanyafelicita](https://github.com/zefanyafelicita) (Felis)
+- [@Clarisse-X](https://github.com/Clarisse-X) (Clarisse)
+- [@azalea-17](https://github.com/azalea-17) (Azel)
+- [@erumiii](https://github.com/erumiii) (Keenan)
